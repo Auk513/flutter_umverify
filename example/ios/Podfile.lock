@@ -14,9 +14,9 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/flutter_umverify/ios"
 
 SPEC CHECKSUMS:
-  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+  Flutter: 50d75fe2f02b26cc09d224853bb45737f8b3214a
   flutter_umverify: a84af54c1a426e3a7a345c87c62b7694a244f56c
 
-PODFILE CHECKSUM: aafe91acc616949ddb318b77800a7f51bffa2a4c
+PODFILE CHECKSUM: bfdb634f57c4aa1d8bbbbf77731675d41d4e7d96
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.11.2

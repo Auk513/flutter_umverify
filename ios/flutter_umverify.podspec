@@ -17,16 +17,11 @@ Pod::Spec.new do |s|
   s.public_header_files = 'Classes/**/*.h'
   s.dependency 'Flutter'
   s.platform = :ios, '9.0'
-
-  s.vendored_frameworks = 'Frameworks/UMVerify.framework','Frameworks/YTXMonitor.framework','Frameworks/YTXOperators.framework', 'Frameworks/UMDevice.framework', 'Frameworks/UMCommon.framework'
-  
-  
-  s.frameworks = 'SystemConfiguration', 'CoreTelephony', 'UIKit', "Foundation"
-  s.libraries = 'z', 'sqlite3'
-  
-  s.static_framework = false
-
-  # 加载静态资源
+  s.dependency 'UMVerify'
+  s.dependency 'UMCommon'
+  s.dependency 'YYKit'
+  s.static_framework = true
   s.resources = ['Assets/*']
+  s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'VALID_ARCHS[sdk=iphonesimulator*]' => 'x86_64' }
 
 end
