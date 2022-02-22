@@ -42,9 +42,7 @@ class FlutterUmverify {
    * */
   Future<Map<dynamic, dynamic>> checkVerifyEnable() async {
     print("$flutter_log" + "checkVerifyEnable");
-    final Map resultDic = await _channel.invokeMethod("checkVerifyEnable");
-    print("$flutter_log" + "$resultDic");
-    return resultDic;
+    return await _channel.invokeMethod("checkVerifyEnable");
   }
 
   /*
