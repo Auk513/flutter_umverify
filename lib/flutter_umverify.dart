@@ -83,18 +83,3 @@ class FlutterUmverify {
     }
   }
 }
-/// 监听返回类
-class UVListenerEvent {
-  int resultCode; //返回码
-  String msg; //事件描述
-  String token; // token
-
-  UVListenerEvent.fromJson(Map<dynamic, dynamic> json)
-      : resultCode = json['resultCode'],
-        msg = json['msg'],
-        token = json['token'];
-
-  Map toMap() {
-    return {'resultCode': resultCode, 'msg': msg, 'token': token};
-  }
-}
