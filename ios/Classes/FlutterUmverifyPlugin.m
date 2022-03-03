@@ -23,6 +23,8 @@
         [self loginAuthResult:result];
     } else if ([call.method isEqualToString:@"checkVerifyEnable"]) {
         [self checkVerifyEnableResult:result];
+    } else if ([call.method isEqualToString:@"dismiss"]) {
+        [self handleBack:nil];
     }
 }
 
@@ -36,7 +38,7 @@
     if ([UMCommonUtils checkDeviceCellularDataEnable]) {
         [UMCommonHandler checkEnvAvailableWithAuthType:UMPNSAuthTypeLoginToken complete:^(NSDictionary * _Nullable resultDic) {
             if ([resultDic[@"resultCode"] isEqualToString:PNSCodeSuccess]) {
-                [UMCommonHandler accelerateLoginPageWithTimeout:3.0 complete:^(NSDictionary * _Nonnull resultDic) {
+                [UMCommonHandler accelerateLoginPageWithTimeout:2.0 complete:^(NSDictionary * _Nonnull resultDic) {
                     if ([resultDic[@"resultCode"] isEqualToString:PNSCodeSuccess]) {
                         result(@{@"result": @1});
                     }else {

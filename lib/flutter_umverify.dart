@@ -60,6 +60,11 @@ class FlutterUmverify {
     return await _channel.invokeMethod("loginAuth");
   }
 
+  Future<void> dismiss() async {
+    print("$flutter_log" + "dismiss");
+    return await _channel.invokeMethod("dismiss");
+  }
+
   Future<void> _handlerMethod(MethodCall call) async {
     print("handleMethod method = ${call.method}");
     switch (call.method) {
@@ -70,6 +75,7 @@ class FlutterUmverify {
         break;
       case 'loginWithChangeBtn':
         {
+          dismiss();
           changeBtnCallback();
         }
         break;
@@ -80,4 +86,5 @@ class FlutterUmverify {
         break;
     }
   }
+
 }
